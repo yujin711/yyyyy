@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>일기레이아웃</title>
+
+    <style>
+        /* 초기화 */
+        * { 
+            margin: 0; padding: 0;
+            font-family: Mapo꽃섬;
+        }
+        a { text-decoration: none; }
+        li { list-style: none; }
+    /* 기본 클래스 */
+        .pull-left { float: left; }
+        .pull-right { float:right; }
+
+    /* 페이지 */
+        body {
+            width: 960px; margin: 0 auto;
+            background: #f2e3f5;
+        }
+
+        #page-wrapper {
+            background: white;
+            margin: 40px 0; padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+        }
+    /* 헤더 */
+        #main-header { padding: 20px 50px; }
+        .master-title { 
+            font-size: 35px; 
+            color: #8f2a92;
+        }
+        .master-description {
+            font-size: 15px; font-weight: 500;
+            color: #616060;
+        }
+
+    /* 네비게이션 */
+
+        #main-navigation {
+            border-bottom: 1px solid #C8C8C8;
+            margin-bottom: 5px;
+            height: 45px;
+        }
+        
+        .outer-menu-item {
+            float: right;
+            position: relative;
+        }
+        .outer-menu-item:hover {
+            background: #f2d5f8;
+            color: white
+        }
+
+        .menu-title {
+            display: block;
+            height: 30px; line-height: 30px;
+            text-align: center;
+            padding: 5px 20px;
+        }
+
+        .inner-menu {
+            display: grid;
+            position: absolute;
+            top: 40px; left: 0;
+            width: 100%;
+
+            background: white;
+            box-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
+            z-index: 1000;
+
+            text-align: center
+        }
+
+        .inner-menu-item > a {
+            display: block;
+            padding: 5px 10px;
+            color: black
+        }
+
+        .inner-menu-item > a:hover {
+            background: #f2d5f8;
+            color: white;
+        }
+
+    /* 네비게이션 내부의 검색 */
+
+        .search-bar {
+            height: 26px;
+            padding: 7px;
+        }
+        .input-search {
+            display: block;
+            float: left;
+
+            background-color: #FFFFFF;
+            border: 1px solid #cccccc;
+            border-radius: 15px 0 0 15px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+            width: 120px; height: 24px;
+            padding: 0 0 0 10px;
+            font-size: 12px;
+            color: #555555;
+        }
+
+        .input-search:focus {
+            border-color: rgba(82, 168, 236, 0.8);
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+        }
+
+        .input-search-submit {
+            display: block;
+            float: left;
+
+            width: 50px; height: 26px;
+            border-radius: 0 15px 15px 0;
+            border: 1px solid #CCCCCC;
+
+            margin-left: -1px;
+
+            vertical-align: top;
+            display: inline-block;
+        }
+
+    /* 중앙  */
+
+        /* body 태그의 너비: 960픽셀 */
+        /* #page-wrapper 태그의 padding 속성으로 내용물 너비는 920픽셀 */
+        #content { overflow: hidden; }
+        #main-section {
+            float: left;
+            width: 710px;
+        }
+        #main-aside {
+            float: right;
+            width: 200px;
+        }
+
+    /* 좌측  */
+
+        article { 
+            padding: 0 10px 20px 10px;
+            border-bottom: 1px solid #C8C8C8;
+        }
+
+        .article-header { padding: 20px 0; }
+        .article-title { 
+            font-size: 25px;
+            font-weight: 500; 
+            padding-bottom: 10px;
+        }
+        .article-date { font-size: 13px; }
+        .article-body {
+            font-size: 14px;
+        }
+
+    /* 우측  */
+
+        .aside-list { padding: 10px 0 30px 0; }
+        .aside-list > h3 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .aside-list li a {
+            margin-left: 8px;
+            font-size: 13px;
+            color: #6C6C6C;
+        }
+        /* 새로 바뀐 부분 */
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></scriptsrc></script>
+    <script>
+         $(document).ready(function () {
+            $('.outer-menu-item').hover(function () {
+                $(this).find('.inner-menu').show();
+            }, function () {
+                $(this).find('.inner-menu').hide();
+            });
+        });
+    </script>
+</head>
+<body>
+       <div id="page-wrapper">
+               <header id="main-header"></header>
+               <hgroup>
+                   <h1 class="master-title">소소한 나의 추억일기</h1><br>
+                   <h2 class="master-description">신유진</h2>
+                </hgroup>
+        <nav id="main-navigation"></nav>
+        <nav id="main-navigation">
+            <div class="pull-left">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">⋆⁺고앵이₊⋆</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/watch?v=GdJwvZGpOXA&t=2s">냥</a></li>
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/watch?v=5pOYIbj6kfY">먕</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">⋆⁺배켜닝₊⋆</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/watch?v=v3DP-vs_Qko">⌯'ㅅ'⌯</a></li>
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/watch?v=-u0SnRpBIck"> ´.ㅅ` </a></li>
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/watch?v=J4GF8QVKJxg">'.△'</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">⋆⁺노래₊⋆</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/watch?v=L8UUYfe6-UA">봄노래</a></li>
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/watch?v=mwCeeVU_2Jo">여름노래</a></li>
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/watch?v=k8gx-C7GCGU">가을노래</a></li>
+                            <li class="inner-menu-item"><a href="https://www.youtube.com/watch?v=CL34w0xql7s">겨울노래</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-right">
+                <div class="search-bar">
+                    <form>
+                        <input type="text" class="input-search" />
+                        <input type="submit" class="input-search-submit" value="검색" />
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div id="content">
+            <section id="main-section">
+                <article>
+                    <div class="article-header">
+                        <h3 id=A>
+                        <h1 class="article-title">봄</h1>
+                        <p class="article-date">2021년 봄</p>
+                    </div>
+                    <div class="article-body">
+                        <img src="A627CA6D-6F27-4D24-A488-E620609333B9.JPG" width="300" height="300" /> <img src="IMG_6652.jpg" width="300" height="300" />
+                    </h3>
+                        <br />
+                        <br />
+                        <p>2021년 봄은 입시로 인해 벚꽃 구경을 가지는 못했다. 하지만 꽃을 보러 가지 못한다는 생각을 가지고 있다 보니<br>
+                             주변에 있는 풍경을 더욱 유심히 보게 되었다. 위에 사진은 모두 내 집 주변에서 찍은 벚꽃 사진인데 멀리 놀러 가지  
+                             않아도 충분히 예쁜 벚꽃을 본 거 같아서 행복했던 기억이 생생하다.</p>
+                        <br />
+                        <p>봄은 내가 정말 좋아하는 계절이다. 따스한 날씨도 너무 좋고 풍경과 꽃 향도 좋아서 행복해진다. 그리고<br>
+                            학교 친구들과 졸업사진도 찍고 재미있게 놀았던 기억이 가득해서 2021년 봄은 나에게 좋은 기억들이 가득하다.</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-header">
+                        <h3 id=B>
+                        <h1 class="article-title">여름</h1>
+                        <p class="article-date">2021년 여름</p>
+                    </div>
+                    <div class="article-body">
+                        <img src="IMG_6653.jpg" width="300" height="300"/> <img src="IMG_6655.jpg" width="300" height="300"/> 
+                    </h3>    
+                        <br />
+                        <br />
+                        <p>여름은 나의 생일이 있는 계절이다! 사실 덥고 찝찝한 것도 싫어하고 벌레도 싫어하는 나는 굳이 고르자면 여름을<br>
+                            제일 안 좋아한다. 하지만 여름은 기억을 미화시키는 힘이 있는 것 같다. 쨍하고 맑은 날씨 때문인가?</p>
+                        <br />
+                        <p>2021년 여름엔 친구들이랑 한창 운동장에서 놀기를 좋아했다. 체육 시간에 비눗방울로 놀고 점심 시간엔 운동장을 돌며 게임을 했다. 유치하지만 제일 재미있었다. 우리 반은 체육을 좋아해서 더욱 열정적으로 여름을 즐겼던 것 같다. 지금 생각해보면 고3이라서 모든 게 즐거웠던 거 같기도 하고...지금은 내가 습한 여름을 그때만큼 열정적으로 즐길 수 있을까? 라는 생각이 든다.그래도 모기는 너무 싫어...</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-header">
+                        <h3 id=C>
+                        <h1 class="article-title">가을</h1>
+                        <p class="article-date">2021년 가을</p>
+                    </div>
+                    <div class="article-body">
+                        <img src="IMG_6656.jpg" width="300" height="300"/> <img src="IMG_6657.jpg" width="300" height="300"/> 
+                    </h3>
+                        <br />
+                        <br />
+                        <p>가을부터는 입시에 더욱 집중했어서 계절을 나타내는 사진을 찾기가 힘들었다..ㅜㅜ 실기와 수능 준비로 많은<br>
+                            아이들이 불안해하고 긴장하던 기억이 새록새록 하다.</p>
+                        <br />
+                        <p>실기 준비 때문에 나는 학교를 2교시까지만 나가고 조퇴를 했는데 학교를 어어엄청 좋아했던 나는 매번 아쉬움만<br>
+                            남았다.. 물론 학교에 있어도 다른 애들은 수능 준비를 하느라 지루했겠지만.. 그리고 대부분의 학교가 10월에 실기를 봐서 힘들고 허무하고 후련하고..복잡한 감정이 많이 들었던 계절이다. 지금 돌아보면 꿋꿋하게 끝내서 기특하다는<br>
+                            생각이 든다.</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-header">
+                        <h3 id=D>
+                        <h1 class="article-title">겨울</h1>
+                        <p class="article-date">2021년 겨울</p>
+                    </div>
+                    <div class="article-body">
+                        <img src="IMG_6658.jpg" width="300" height="300"/> <img src="IMG_6659.jpg" width="300" height="300"/> 
+                    </h3>
+                        <br />
+                        <br />
+                        <p>겨울! 일단 2021년 겨울은 내가 입시가 끝난 시기이다. 결과가 빨리 나와서 내 입시도 11월 초에 끝이 났다. 많은 감정이 들었지만 끝남과 동시에 집에서 열심히 쉬었다..</p>
+                        <br />
+                        <p>얼마 남지 않은 학교도 열심히 가고 친구들 서포트도 해주었다. 다른 아이들도 입시가 끝나고 정말 열심히 놀았던 것 같다ㅠㅜ 눈이 오는 날에는 오빠랑 7살처럼 놀아서 너무 재미있었다. 그리고 내가 20살이 됐다. 사실 난 성인이 되기 싫었다... 주량도 알아보고 재미있긴 했지만 고등학교로 돌아가고 싶어ㅜㅠ 이렇게 정리해 보니까 2021년이 너무<br>
+                            그립다. 2021년에 쌓은 추억들로 2022년도 힘내서 무사히 보내고 싶당.. </p><br>
+                    </div>
+                </article>
+            </section>
+            <aside id="main-aside">
+                <div class="aside-list">
+                    <h3>카테고리</h3>
+                    <ul>
+                        <li><a href="#A">봄</a></li>
+                        <li><a href="#B">여름</a></li>
+                        <li><a href="#C">가을</a></li>
+                        <li><a href="#D">겨울</a></li>
+                    </ul>
+                </div>
+                <div class="aside-list">
+                    <h3>최근 글</h3>
+                    <ul>
+                        <li><a href="#">몽룡이</a></li>
+                        <li><a href="#">다롱이</a></li>
+                        <li><a href="#">차돌이</a></li>
+                        <li><a href="#">동글이</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <footer id="main-footer"></footer>
+            <a href="#">Created By 신유진</a>
+        </footer>
+    </div>
+</body>
+</html>
