@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>기말 과제물 2022221030 신유진</title>
+    <meta charset="utf-8" />
+<style>
+body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+}
+.clearfix::after{
+content: "";
+ clear: both; /*float 해제*/
+ display: table;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 20px 0px 0px 40px;
+}
+li{
+  display: inline;
+  padding: 0px 16px 0px 0px;
+  color: #747068;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+h2{
+  color: #a9ceb5;
+  font-family: Arial;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 80px;
+}
+p{
+  color: #252426;
+  font-family: Courier New;
+  margin: 0;
+  padding-top: 40px;
+}
+dd{
+  color: #79756c;
+  font-family: Courier New;
+  margin: 0;
+  padding-top: 40px;
+  font-size: 15px;
+}
+
+#Food{
+  background-color: #f5f3eb;
+  height: 2000px;
+  text-align: center;
+}
+.section-title{
+  text-align: center;
+  text-align: center;
+  color: black;
+}
+            .section-title h3{
+                color: #5d4b33;
+                font-size: 40px;
+                margin: 30px 0px;
+                letter-spacing: 13px;
+                padding: 10px;
+            }
+            .section-text{
+                text-align:center;
+            }
+            .section-text ul{
+                padding: 0px;
+                margin-top: 50px 0px;
+            }
+            .section-text h3{
+                color:#5d4b33;
+                font-size: 40px;
+                margin: 15px 0px;
+                letter-spacing: 13px;
+                padding: 10px;
+            }
+            .section-text p{
+                letter-spacing: 10px;
+                font-size: 20px;
+                color: gray;
+            }
+            .section-text dt{
+                font-size: 20px;
+                padding: 5px 3px;
+                margin: 3px 3px;
+            }
+            .section-text dd{
+                padding: 2px 8px;
+                margin: 2px 8px;
+            }
+            .section-text li img{
+                padding: 3px 3px;
+                margin: 3px 3px;
+            }
+            #best li{
+                float:left;
+                list-style: none;
+                width: 25%;
+                width: calc(25% - 80px - 1px);
+                padding: 25px;
+                margin: 0px 10px;
+                border-right: solid 1px #ddcbc0;
+            }
+            #best li:last-child{
+                border: none;
+            }
+            #new li{
+                float:left;
+                list-style: none;
+                width: 25%;
+                width: calc(25% - 80px - 1px);
+                padding: 35px;
+                border-right: solid 1px #ddcbc0;
+            }
+            #new li:last-child{
+                border: none;
+            }
+#nav-menu a{
+  text-decoration: none;
+  position: relative;
+  left: 1200px;
+}
+nav li:hover{
+    color: #7ca25e;
+}
+#home{
+  height: 750px;
+  background-size: cover;
+  background-image: url(hi.jpg);
+}
+#main_visual{
+  background-image: url("풍경1.jpeg");
+  text-align: center;
+  padding: 250px 0px;
+}
+#main_visual h1{
+  color: #7ca25e;
+  font-family: Arial;
+  font-size: 68px;
+  opacity: 0.80;
+}
+#Location{
+  background-color: #e3e1da;
+  height: 900px;
+}
+
+</style>
+</head>
+    <body>
+    <div id="home">
+    <nav class="nav-menu">
+      <ul id="nav-menu">
+        <li></li><a href="#home"><li>Home</li></a></li>
+        <li></li><a href="#Foo"><li>Food&Dessert</li></a></li>
+        <li></li><a href="#Location"><li>Location</li></a></li>
+      </ul>
+    </nav>
+      <div id="main_visual">
+        <h1>HiㅡYeonnam</h1>
+      </div>
+    </div>
+    <div id="Food">
+      <section class="section-title">
+        <h3>ㅣ연남동ㅣ</h3>
+        <p> 제가 직접 돌아다니며 먹은 <br />
+         연남동 맛집을 소개하려 합니다.<br />
+         연남동에서 어디 갈지 고민이라면 참고해보세요! :)
+        </p>
+      </section>
+      <section class="section-text" id="best">
+        <h3>Yeonnam-dong Food</h3>
+        <p>연남동에서 먹기 좋은 음식점</p>
+        <br>
+        <ul class="clearfix">
+            <li>
+            <img src="IMG_9452.jpg" width="300px" height=""/>
+            <dl>
+                <dt><strong>랫댓</strong><br />
+                 <dd>
+                    [피자]
+                 </dd>
+                </dt>
+                <dd>연남동에서 유명한 피자 가게 <br />
+                    반반 피자가 유명하며, 그 중애서 <br />
+                    감자튀김 피자와 닭껍질 피자가<br />
+                    유명해요. 예절샷 성지...
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <img src="IMG_9456.jpg" width="300px" height="" />
+            <dl>
+                <dt><strong>해피치즈스마일</strong><br />
+                <dd>
+                    [떡볶이,돈까스]
+                </dd>
+                </dt>
+                <dd>떡볶이와 돈까스를 같이 파는 가게<br />
+                    사이드 메뉴로는 중국당면 튀김이 유명해요.<br />
+                    세트 구성도 괜찮아서 세트 메뉴 추천!<br />
+                    이 가게도 예절샷 성지...
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <img src="IMG_9458.jpg"width="300px" height="" />
+            <dl>
+                <dt><strong>연남취향</strong><br />
+                <dd>
+                    [양식]
+                </dd>
+                </dt>
+                <dd>
+                    분위기 괜찮은 양식집<br />
+                    파스타가 맛있어요.<br />
+                    메뉴가 다양해서 좋아요.<br />
+                    다만 가격대가 조금 있는 편!
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <img src="IMG_9454.jpg"width="300px" height="" />
+            <dl>
+                <dt><strong>솥솥 연남점</strong><br />
+                <dd>
+                    [한식]
+                </dd>
+                </dt>
+                <dd>솥밥으로 유명한 맛집<br />
+                    이 중에서 가장 웨이팅이 길어요.<br />
+                    스테이크 솥밥이 유명해요<br />
+                    한식이라 든든해서 좋아요!
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</section>
+<section class="section-text" id="new">
+    <h3>Yeonnam-dong dessert</h3>
+    <p>연남동에서 먹기 좋은 디저트</p>
+    <br>
+    <ul class="clearfix">
+        <li>
+            <img src="IMG_9455.jpg" width="300px" height="" />
+            <dl>
+                <dt><strong>플루프커피</strong><br />
+                <dd>
+                    [인테리어,케이크]
+                </dd>
+                </dt>
+                <dd>깔끔한 인테리어와 예쁜 패턴의 컵이<br />
+                    잘 어우러져 감성 카페 느낌이에요.<br />
+                    케이크와 크로플 등 종류도 다양하고<br />
+                    맛도 있는 카페입니다 :)
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <img src="IMG_9457.jpg" width="300px" height="" />
+            <dl>
+                <dt><strong>오랑지</strong><br />
+                <dd>
+                    [아기자기한 디저트]
+                </dd>
+                </dt>
+                <dd>웨이팅이 긴 디저트 카페..<br />
+                    계절이나 시즌마다 디저트가 달라져요.<br />
+                    사장님이 정말 친절하시고 인테리어가 귀엽다..<br />
+                    웨이팅이 있으니 없는 시간에 잘 맞춰 가세요!
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <img src="IMG_9459.jpg" width="300px" height="" />
+            <dl>
+                <dt><strong>카페 레이어드 연남점</strong><br />
+                <dd>
+                    [다양한 디저트]
+                </dd>
+                </dt>
+                <dd>들어가는 순간 많은 디저트들이 반기는 곳<br />
+                    디저트가 노출 되어 있어서<br />
+                    위생상 신경 쓰일 수 있어요.<br />
+                    종류가 다양하고 2층짜리 카페라서<br />
+                    답답하지 않아 좋아요!
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <img src="IMG_9453.JPG" width="300px" height="" />
+            <dl>
+                <dt><strong>딩가케이크</strong><br />
+                <dd>
+                 [귀여운 인테리어, 케이크]
+                </dd> 
+                </dt>
+                <dd>외관부터 동화같은 비주얼에 카페<br />
+                    케이크도 정말 귀엽게 생겼고 맛도 좋아요<br />
+                    이 카페도 2층짜리라 답답하지 않아요<br />
+                    전체적으로 빈티지한 느낌!
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</section>
+<section class="section-title" id="Location">
+    <h3>Location</h3>
+    <p>소개한 모든 맛집의 위치를 한 눈에 볼 수 있습니다.</p>
+    <br>
+    <br>
+			<tr>
+			<img height=600 width=1200 src="IMG_9463 2.jpg">
+			<tr>
+</section>
+	</div>
+  </body>
+</html>
